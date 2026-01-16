@@ -10970,3 +10970,16 @@ section.resume-section .resume-section-content {
     padding-bottom: 5rem;
   }
 }
+@media print {
+  /* Quita elementos innecesarios */
+  .no-print { display: none !important; }
+
+  /* Forzar A4 y márgenes */
+  @page { size: A4; margin: 12mm; }
+
+  /* Evitar cortes feos */
+  section, .card, .block { break-inside: avoid; page-break-inside: avoid; }
+
+  /* Ajustes típicos */
+  body { font-size: 11pt; line-height: 1.25; }
+}
